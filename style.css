@@ -69,15 +69,28 @@ body {
 }
 
 #section1 {
-
-    background-image: url(nice.jpg);
+    background-image: url(background3.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 } 
 .first {
-    font-size: 15rem;
-    color: #ce829b;
+    font-size: 10rem;
+    color: #e6e4e5;
+}
+
+
+
+.contener {
+    width: 50%;
+    height: 50%;
+
+}
+#section2{ 
+    background-image: url(background2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .wrapper-section2 {
@@ -86,11 +99,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #c78da1;
 }
-
-.contener {
-    width: 50%;
-    height: 50%;
-
+.about-my {
+    color: rgb(236, 232, 232);
+    text-align: center;
+    font-size: 3rem;
+    font-family: monospace;
 }
