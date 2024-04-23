@@ -54,7 +54,7 @@ body {
 }
 
 .element:hover {
-    color: #008000;
+    color: #000;
 }
 
 .res {
@@ -84,8 +84,10 @@ body {
 
 .first {
     font-size: 10rem;
-    color: #e6e4e5;
-    background-color: #f1f3f14b;
+    font-size: clamp(4rem, 15vw, 10rem);
+    color: #E6E4E5;
+    background: #F1F3F14B;
+    backdrop-filter: blur(20px);
     border-radius: 50px;
     padding: 15px;
 }
@@ -94,8 +96,9 @@ body {
     text-decoration: none;
     color: #ffffff;
     text-align: center;
-    background: #031a0398;
-    font-size: xx-large;
+    background: #031A0398;
+    font-size: 2rem;
+    font-size: clamp(1rem, 5vw, 2rem);
     border: 4px solid #ffffff;
     border-radius: 50px;
     padding: 15px;
@@ -103,7 +106,7 @@ body {
 }
 
 .wraper a:hover {
-    background: hsla(120, 79%, 15%, 0.596);
+    background: #08440898;
 }
 
 #section1 {
@@ -111,12 +114,11 @@ body {
     width: 100vw;
     position: fixed;
     z-index: -1;
-    background-image: url(bf.jpg);
+    background-image: url(img/bf.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 
 .contener {
     width: 50%;
@@ -138,14 +140,14 @@ body {
 }
 
 .about-my {
-    color: rgb(236, 232, 232);
+    color: #ECE8E8;
     text-align: center;
     font-size: clamp(10px, 3vw, 3rem);
     font-family: monospace;
-    background-color: #f1f3f14b;
+    background-color: #F1F3F14B;
+    backdrop-filter: blur(20px);
     border-radius: 50px;
     padding: 15px;
-    backdrop-filter: blur(20px);
 }
 
 .section3-wraper {
@@ -186,6 +188,137 @@ body {
     font-size: 3rem;
 
 }
+
+#section4 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.wraper-section4 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact1 {
+    font-size: 5rem;
+    color: #FFF;
+}
+
+.contact2 {
+    color: #FFF;
+}
+
+.contact {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.message {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    display: flex;
+}
+
+.message form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+    border: 2px solid #FFF;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    transform: translateX(-25px);
+    width: 50%;
+    gap: 15px;
+}
+
+.input-field {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #f3f3ff;
+    background: transparent;
+    border-radius: 5px;
+    outline: none;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: 0.5s;
+}
+
+#text-area {
+    background: transparent;
+    border: 1px solid #f3f3ff;
+    border-radius: 5px;
+    outline: transparent;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    width: 90%;
+    resize: none;
+}
+
+.submit {
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: grab;
+    width: 20%;
+    padding: 10px 25px;
+}
+
+.submit:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 992px) {
+    .wraper-section4 {
+        flex-direction: column;
+    }
+
+    .contact {
+        width: 100%;
+        height: 20%;
+        justify-content: flex-end;
+    }
+
+    .contact1 {
+        font-size: 4rem;
+    }
+
+    .message {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .message form {
+        padding: 20px 30px;
+        transform: translateX(0);
+        width: 80%;
+        display: flex;
+        align-items: center;
+    }
+
+    .input-field,
+    #text-area,
+    .submit {
+        width: 90%;
+    }
+}
+
 
 @media screen and (max-width:768px) {
     .nav-bar {
@@ -232,5 +365,90 @@ body {
 
     .menu {
         margin-right: 50px;
+    }
+
+    .first {
+        font-size: 8rem;
+        font-size: clamp(3rem, 15vw, 15rem);
+        border-radius: 20px;
+    }
+
+    .wraper a {
+        font-size: 1.5rem;
+        font-size: clamp(1rem, 3vw, 1.5rem);
+        border: 2px solid #ffffff;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .contener {
+        width: 90%;
+    }
+
+    .about-my {
+        font-size: clamp(10px, 5vw, 5rem);
+        border-radius: 20px;
+        padding: 15px;
+    }
+
+    .contact1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .nav-bar {
+        width: 100%;
+    }
+
+    .logo {
+        margin-left: 30px;
+    }
+
+    .close {
+        right: 30px;
+    }
+
+    .menu {
+        margin-right: 30px;
+    }
+
+    .skill {
+        width: 90%;
+        height: 150px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .skill i {
+        font-size: 5rem;
+        margin-left: 15px;
+    }
+
+    .skill span {
+        font-size: 2rem;
+        margin-right: 15px;
+    }
+
+    .contact1 {
+        font-size: 2.5rem;
+    }
+
+    .contact2 {
+        font-size: 1rem;
+    }
+
+    .message form {
+        padding: 20px 10px;
+        transform: translateX(0);
+        width: max(80%, 250px);
+        display: flex;
+        align-items: center;
+    }
+
+    .input-field,
+    #text-area,
+    .submit {
+        width: 90%;
     }
 }
